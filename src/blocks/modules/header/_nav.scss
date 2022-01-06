@@ -1,0 +1,45 @@
+.nav {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-super-light-gray);
+    opacity: 0;
+    visibility: hidden;
+    overflow: auto;
+    color: var(--color-black);
+    transition: background-color 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    &__list {
+        padding: 50px 0;
+    }
+    &__item {
+        display: block;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    &__link {
+        font-size: 30px;
+        position: relative;
+        &:hover {
+            &:before {
+                width: 100%;
+            }
+        }
+        &:before {
+            @include pseudo();
+            position: absolute;
+            top: 50%;
+            width: 0%;
+            height: 1px;
+            transform: translateY(-50%);
+            background-color: var(--color-black);
+            transition: width 0.2s;
+        }
+    }
+}

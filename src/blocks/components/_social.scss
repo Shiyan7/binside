@@ -1,0 +1,21 @@
+.social {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    &__link {
+        display: block;
+        width: 16px;
+        height: 16px;
+        fill: var(--color-white);
+        border-radius: 2px;
+        transition: filter 0.3s ease-in-out;
+        &:hover {
+            filter: drop-shadow(0 4px 4px var(--color-white));
+        }
+    }
+}

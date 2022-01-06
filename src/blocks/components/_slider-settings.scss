@@ -1,0 +1,52 @@
+.slider {
+    &__controls {
+        display: grid;
+        position: absolute;
+        z-index: 2;
+        place-items: center;
+        width: 314px;
+        height: 40px;
+    }
+    &__button {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 15px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &:hover {
+            &:before {
+                opacity: 1;
+            }
+        }
+        &-prev {
+            left: 0;
+        }
+        &-next {
+            right: 0;
+        }
+        &:before {
+            @include pseudo();
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 78px;
+            height: 40px;
+            transform: translate(-50%, -50%);
+            background-color: var(--color-super-light-gray);
+            transition: opacity 0.5s;
+            opacity: 0;
+        }
+    }
+}
+.current-quantity {
+    position: absolute;
+    left: 70px;
+}
+.general-quantity {
+    position: absolute;
+    color: var(--color-gray);
+    right: 70px;
+    transition: color 0.5s;
+}

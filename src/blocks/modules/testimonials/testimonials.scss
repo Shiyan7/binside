@@ -1,0 +1,84 @@
+.testimonials {
+    &__container {
+        position: relative;
+        padding-top: vw(150);
+        padding-bottom: vw(224);
+    }
+    &__title {
+        margin-bottom: 100px;
+    }
+    &-slider {
+        position: relative;
+        padding-bottom: vw(216);
+        &__controls {
+            right: 0;
+            bottom: 0;
+            .slider__button {
+                &:before {
+                    background-color: var(--color-silver);
+                }
+            }
+        }
+    }
+    &__link {
+        position: relative;
+        bottom: vw(68);
+        left: 0;
+    }
+}
+.testimonial {
+    &-slide {
+        max-width: vw(620);
+        border: 1px solid var(--color-silver);
+        padding: vw(50);
+        transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        &:hover {
+            background-color: #fff;
+            border: 1px solid transparent;
+            box-shadow: 2px 2px 59px rgba(0, 0, 0, 0.05);
+        }
+    }
+    &__text {
+        max-width: 600px;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 57px;
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+    }
+    &__userpic {
+        display: flex;
+        flex-shrink: 0;
+        object-fit: cover;
+        max-width: 70px;
+        max-height: 70px;
+        border-radius: 100%;
+        overflow: hidden;
+        margin-right: 30px;
+    }
+    &__right {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+    &__name {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: var(--color-dark);
+    }
+    &__descr {
+        color: var(--color-gray);
+    }
+    &__date {
+        white-space: nowrap;
+        font-size: 13px;
+        color: var(--color-gray);
+    }
+}

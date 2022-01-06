@@ -1,0 +1,18 @@
+.select {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    overflow: hidden;
+    font-weight: 400;
+    &__control {
+        cursor: pointer;
+        width: 100%;
+        outline: none;
+        appearance: none;
+        color: var(--color-white);
+        background-color: transparent;
+    }
+    &__option {
+        color: var(--color-black);
+    }
+}

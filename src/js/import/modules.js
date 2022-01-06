@@ -1,0 +1,12 @@
+import "%modules%/header/header";
+import "%modules%/header/preloader";
+import "%modules%/header/burger";
+import "%modules%/header/search-btn";
+import "%modules%/hero/hero";
+import "%modules%/about/about";
+import "%modules%/services/tabs";
+import "%modules%/works/works";
+import "%modules%/testimonials/testimonials";
+import "%modules%/news/news";
+import "%modules%/subscribe/subscribe";
+import "%modules%/instagram/instagram";

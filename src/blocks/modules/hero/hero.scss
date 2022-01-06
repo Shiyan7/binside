@@ -1,0 +1,102 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 850px;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        width: vw(654);
+        padding: 94px 70px 206px 70px;
+        background-color: #fff;
+        animation: heroContentAnimation 1s ease-in-out 2.1s;
+        &__title {
+            margin-bottom: 100px;
+            animation: hiddenElements 3s ease-in-out 0s, visibleElements 1s ease-in-out 3s;
+        }
+        &__subtitle {
+            font-size: 18px;
+            margin-bottom: 110px;
+            color: var(--color-gray);
+            animation: hiddenElements 3s ease-in-out 0s, visibleElements 1s ease-in-out 3s;
+        }
+    }
+    &-social {
+        position: absolute;
+        right: 78px;
+        bottom: 74px;
+        animation: socialAnimation 2s ease-in-out 2s;
+    }
+    &-slider {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        &__controls {
+            bottom: 94px;
+            left: 70px;
+            animation: hiddenElements 3s ease-in-out 0s, visibleElements 1s ease-in-out 3s;
+        }
+    }
+    &-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+        &__descr {
+            position: absolute;
+            bottom: 66px;
+            left: vw(270);
+            font-size: 18px;
+            max-width: 280px;
+            line-height: 25px;
+            color: var(--color-white);
+            animation: heroslideDescr 4s ease-in-out 0s;
+        }
+        &__image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: vw(1245);
+            height: 100%;
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+    }
+    &__links {
+        animation: hiddenElements 3s ease-in-out 0s, visibleElements 1s ease-in-out 3s;
+    }
+    &__link {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+}
+
+@keyframes heroContentAnimation {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes heroslideDescr {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes socialAnimation {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

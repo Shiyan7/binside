@@ -1,0 +1,42 @@
+.subscribe {
+    padding-bottom: vw(150);
+    &__container {
+        display: flex;
+        align-items: center;
+        padding: vw(75) vw(150);
+        background-color: var(--color-white);
+    }
+    &__title {
+        font-size: vw(36);
+        line-height: vw(50);
+        max-width: vw(249);
+    }
+    &-form {
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin-top: 8px;
+        margin-left: 52px;
+        &__input {
+            position: relative;
+            width: 100%;
+            padding: 0 165px 26px 50px;
+            color: var(--color-dark);
+            font-size: 18px;
+            border-bottom: 1px solid var(--color-dark);
+            outline: none;
+            background-image: url(../img/svg/mail.svg);
+            background-repeat: no-repeat;
+            background-size: 24px;
+            background-position: top left;
+            &::placeholder {
+                color: var(--color-gray);
+            }
+        }
+        &__btn {
+            position: absolute;
+            right: 1px;
+            bottom: 10px;
+        }
+    }
+}

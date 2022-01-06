@@ -1,0 +1,44 @@
+.team {
+    background-color: #fff;
+    &__container {
+        display: grid;
+        place-items: flex-start;
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: vw(118);
+        position: relative;
+    }
+    &__list {
+        display: flex;
+        grid-column: 3 span;
+    }
+    &__item {
+        margin-top: auto;
+        position: relative;
+        &-content {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: vw(265);
+            left: 0;
+        }
+        &-image img {
+            max-width: 100%;
+            object-fit: cover;
+        }
+        &-name {
+            font-size: 18px;
+            max-width: 100px;
+            margin-bottom: 28px;
+        }
+        &-descr {
+            color: var(--color-gray);
+            max-width: 100px;
+        }
+        &:last-child {
+            margin-left: vw(-189);
+        }
+    }
+    &__link {
+        bottom: vw(140);
+    }
+}

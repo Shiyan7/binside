@@ -1,0 +1,41 @@
+- 
+    let navArray = [
+        'Company',
+        'Services',
+        'Our Works',
+        'Testimonials',
+        'Our News',
+        'Our News',
+    ]
+
+header.header
+    .container.header__container
+        a.logo(href="#" aria-label="Logo")
+            +icon("logo")
+        .header__right
+            a.header__link(href="tel:18882062011") +1 888 206-20-11
+            a.header__link(href="mailto:connect@binside.fr") connect@binside.fr
+            label.select.header__select(aria-hidden="true")
+                select.select__control
+                    option.select__option Fr
+                    option.select__option Eng
+                    option.select__option Ru
+            button.btn-reset.header__btn(aria-label="Order a Project") Order a Project
+            button.btn-reset.search-btn.header__search-btn
+                +icon("search")
+            button.btn-reset.burger.header__burger
+                span.burger__line
+        nav.nav
+            ul.nav__list
+                each navItem in navArray
+                    li.nav__item
+                        a.nav__link(href="#") #{navItem}
+    .search-window
+        .container.search-window__container
+            button.btn-reset.search-window__close
+                +icon("close")
+            .search-window__form
+                input.search-window__input(type="search" placeholder="Search")
+                button.search-window__btn.btn-reset(type="submit" aria-label="Search")
+                    +icon("search")
+            

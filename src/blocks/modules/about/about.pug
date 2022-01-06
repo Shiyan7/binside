@@ -1,0 +1,17 @@
+section.about
+    .container.about__container
+        h2.about__title.section-title 
+            span About <br> Company
+        .about__right
+            .swiper-slider.about-slider
+                .about-gallery
+                    picture.about-gallery__image
+                        source(srcset="img/about-1.jpg" media="(min-width: 1025px)")
+                        img(class="lazy" data-src="img/about-mobile-1.jpg" src="img/1.jpg" alt="About Image 1")
+                    picture.about-gallery__image
+                        source(srcset="img/about-2.jpg" media="(min-width: 1025px)")
+                        img(class="lazy" data-src="img/about-mobile-2.jpg" src="img/1.jpg" alt="About Image 2")
+            .about-content
+                p.about-content__text There is nothing better than a professional team with many years of experience.
+                p.about-content__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis quam netus id posuere ullamcorper morbi fringilla tincidunt rutrum. Volutpat dolor tristique turpis amet. Nec in pellentesque scelerisque gravida in facilisis. Nec, eget dui integer pulvinar.
+        a.about__link.section-link.main-link(href="#") About Company

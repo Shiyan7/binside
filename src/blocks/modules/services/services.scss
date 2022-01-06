@@ -1,0 +1,18 @@
+.services {
+    padding-top: vw(140);
+    padding-bottom: vw(155);
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        position: relative;
+    }
+    &__tabs {
+        display: grid;
+        grid-column: 3 span;
+        padding: 16px 32px 0 8px;
+        grid-template-columns: 35% 65%;
+        &-list {
+            margin-right: 50px;
+        }
+    }
+}

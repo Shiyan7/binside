@@ -1,0 +1,73 @@
+.preloader {
+    display: block;
+    visibility: visible;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    transition: opacity 0.5s, visibility 0.5s;
+    &:before {
+        content: "";
+        display: block;
+        position: relative;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        transform: translateY(-50%);
+        animation: lineWidth 0.7s ease-in-out 0s, lineHeight 0.7s ease-in-out 0.7s, lineVisibility 0.7s ease-in-out 1.4s;
+        background-color: var(--color-dark);
+    }
+}
+
+@keyframes lineWidth {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes lineHeight {
+    0% {
+        width: 100%;
+        height: 3px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes lineVisibility {
+    0% {
+        top: 50%;
+        width: 100%;
+        height: 100%;
+    }
+    100% {
+        top: 0%;
+        width: 100%;
+        height: 0%;
+    }
+}
+@keyframes hiddenElements {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes visibleElements {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

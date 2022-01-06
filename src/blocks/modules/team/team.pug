@@ -1,0 +1,20 @@
+section.team
+    .container.team__container
+        h2.team__title.section-title 
+            span Our <br>Team
+        ul.team__list
+            li.team__item
+                .team__item-content
+                    span.team__item-name Robert Fox
+                    span.team__item-descr Director
+                picture.team__item-image
+                    source(srcset="img/team-1.png" media="(min-width: 577px)")
+                    img(class="lazy" data-src="img/team-1-mobile.png" src="img/1.jpg" alt="Robert Fox")
+            li.team__item
+                .team__item-content
+                    span.team__item-name Jacob Fox
+                    span.team__item-descr Architector
+                picture.team__item-image
+                    source(srcset="img/team-2.png" media="(min-width: 577px)")
+                    img(class="lazy" data-src="img/team-2-mobile.png" src="img/1.jpg" alt="Jacob Fox")
+        a.team__link.section-link.main-link(href="#") See All Team
